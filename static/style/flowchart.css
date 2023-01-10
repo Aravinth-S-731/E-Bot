@@ -1,0 +1,332 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+   /* font-family: 'Open Sans', sans-serif; */
+}
+
+
+/* NAV - BAR */
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    margin-top: 6px;
+    width: 67px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 27px;
+    position: relative;
+
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: medium;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #00ffee;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+
+/* FLOW CHART / WORKING */
+
+.work-content h2{
+    padding-top: 70px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-bottom: 35px;
+}
+.work-content h4{
+    letter-spacing: 2px;
+    text-align: center;
+    padding-bottom: 105px;
+}
+
+
+.usr-inp-div{
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
+.usr-inp-div p{
+    text-align: center;
+}
+.usr-img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-left: 11px;
+}
+.usr-query{
+    flex: auto;
+    position: relative;
+    border: 2px solid rgb(0, 115, 255);
+    color: #fff;
+    background-color: #0275d8;
+    border-radius: 7px;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+}
+
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+    animation: typewriter 4s steps(44) 3s 1 normal both,
+            blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+    from{width: 0;}
+    to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+}
+
+            /* section 2 */
+
+.content{
+    margin: auto;
+    width: 50%;
+    border: 2px solid #000;
+    border-radius: 12px;
+    width: 90%;
+    height: 400px;
+}
+
+.token-content{
+    font-size: larger;
+    padding-top: 5px;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: justify;
+}
+
+.json-box{
+    margin: auto;
+    width: 50%;
+    border: 2px solid #000;
+    height: 250px;
+}
+.json-box p{
+    font-size: 5px;
+}
+.json-inner-box{
+    padding: 2px;
+    margin: auto;
+    width: 95%;
+    border: 2px solid #000;
+    height: 40px;
+    line-height: 0%;
+}
+
+/* NEXT - PAGE */
+
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("/static/Images/nxt_page_background.jpg");
+    box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.4);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 60px 0;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #004887;
+    color: #fff;
+    background: #003a6d;
+    transition: 1s;
+    text-decoration: none;
+}
+
+/*  */
+/*--------------------------------------------------------------------------------------------------------------*/
+/* Flowchart */
+/*  */
+
+.arrows-and-corners {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.arrows-and-corners {
+    margin: 1em 0;
+    padding: 1em;
+    outline: 1px solid blue;
+}
+.example {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*  */
+.arrow {
+    display: flex;
+    height: 100px;
+    position: relative;
+    width: 100px;
+    
+    /*outline: 1px dashed green;*/
+}
+.arrow.hor {
+    align-items: center;
+}  
+.arrow.ver {
+    align-content: center;
+    justify-content: center;
+}
+/*  */
+.arrow .line {
+    background-color: rgb(0, 0, 0);
+    display: block;
+}
+.arrow .line.top-to-bottom {
+    height: auto;
+    width: 2px;
+}
+.arrow .line.top-to-bottom::after {
+	border-right: 5px solid transparent;
+	border-top: 30px solid rgb(0, 0, 0);
+	border-left: 5px solid transparent;
+    content: "";
+	height: 0;
+    left: 45px;
+    position: absolute;
+    top: 50px;
+    width: 0;
+}
+/*  */
+.corner {
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    content: "";
+    display: block;
+    height: 125px;
+    position: relative;
+    width: 185px;
+}  
+.corner-top-left {  
+    border-radius: 30px 0 0 0;
+    border-width: 2px 0 0 2px;
+    left: 45px;
+    top: 45px;
+}
+.corner-top-right {
+    border-radius: 0 30px 0 0;
+    border-width: 2px 2px 0 0;
+    left: 0px;
+    top: 45px;
+}
+.corner-bottom-left { 
+    border-radius: 0  0 0 30px;
+    border-width: 0 0 2px 2px;
+    left: 45px;
+    top: 0px;
+}
+
+.corner-bottom-right {
+    border-radius: 0 0 30px 0;
+    border-width: 0 2px 2px 0;
+    left: 0px;
+    top: 0px;
+}
+
+/* --------------------------------------------------- */
+/* keras content */
+
+.keras-content{
+    /* text-align: center; */
+    font-size: large;
+    padding-left: 260px;
+    padding-right: 180px;
+}
+
+/* --------------------------------------------------- */
+/* FOOTER */
+
+.footer2{
+    /* padding-top: 420px; */
+    text-align: center;
+    padding-bottom: 60px;
+}
+.footer2 p{
+    color: #ffffff;
+}
+.icons1 .fa{
+    color: #00a297;
+    margin: 0 15px;
+    transition: 0.5s;
+}
+.icons1 .fa:hover{
+    color: #0275d8;
+    transition: 0.5s;
+}
+
+/* --------------------------------------------------- */
+/* NAV - Dropdown */
+
+.dropdown{
+    background: transparent;
+    transition: 1s;
+}
+.dropdown button{
+    background: transparent;
+    border: transparent;
+}
+.dropdown ul{
+    background-color: #000;
+    transition: 1s;
+}
+.dropdown-item{
+    background-color: #000;
+    transition: 1s;
+}
+.dropdown-menu{
+    transition: 1s;
+}

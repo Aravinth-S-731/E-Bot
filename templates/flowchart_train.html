@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/flowchart.css') }}">
+    <title>How it works-Training</title>
+    <link rel="website icon" type="png" href="{{ url_for('static', filename='images/web_icon.png') }}">
+</head>
+<body>
+
+    <!-- HEADER AND NAV - BAR -->
+
+    <section class="about">
+        <nav class="navbar navbar-dark bg-dark">
+            <a href="/home"><img src="{{url_for('static', filename='Images/logo_chatbot.png')}}"></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="/home">HOME</a></li>
+                    <li><a href="/about">ABOUT</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">WORKING</button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="/user-working">USER RESPONSE</a></li>
+                                <li><a class="dropdown-item" href="/bot-training">TRAINING</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="/index">CHATBOT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <div class="work-content">
+        <h2 style="font-size: 50px;">WORKING<p style="font-size: x-large;">Chatbot response<br>&<br>Training model</p></h2>
+        <h4>Let's look how the pre-defined data of the chatbot is processed and a training model is genarated.</h4>
+
+
+        <!-- json flowchart -->
+        
+        <div class="row">
+            <div class="col-4">
+                <div class="example" >
+                    <div class="arrow cor">
+                        <div class=" corner corner-top-left"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4" style="text-align: center;">
+                <img style="width: 20%; height: 45%;" src="{{ url_for('static', filename='images/json_img.png') }}">
+                <h3>JSON file</h3>
+            </div>
+            <div class="col-4">
+                <div class="example">
+                    <div class="arrow cor">
+                        <div class="corner corner-top-right"></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+        <!-- tokenize and append -->
+        <div class="row">
+            <div class="col-4">
+                <div class="example" style="padding-right: 9px;">
+                    <div class="arrow ver">
+                        <div class="line top-to-bottom"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+
+            </div>
+            <div class="col-4">
+                <div class="example" style="padding-left: 98px;">
+                    <div class="arrow ver">
+                        <div class="line top-to-bottom"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- content -->
+        <div class="row">
+            <div class="col-4">
+                <h3 style="text-align: center;padding-bottom: 10px;">Tokenizing pre-defined <span style="color: blue;">questions</span></h3>
+                <div style="border: 2px solid #000; background-color: #000; color: #fff; width: 360px; height: 40px; margin: auto; ">
+                    <h4 style="text-align: center; font-size: larger; padding-top: 3.5px;">['pay','electricity','bill']</h4>
+                </div>
+                </div>
+            <div class="col-4">
+
+            </div>
+            <div class="col-4">
+                <h3 style="text-align: center;padding-bottom: 10px;">Tokenizing pre-defined <span style="color: blue;">tags</span></h3>
+                <div style="border: 2px solid #000; background-color: black; color: white; width: 400px; height: 40px;  margin: auto">
+                    <h4 style="text-align: center; font-size: large; padding-top: 3.5px;">['electricity','electricitybill']</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- lemmatize and bag -->
+        <div class="row" style="padding-top: 18px;">
+            <div class="col-4">
+                <div class="example" style="padding-right: 9px;">
+                    <div class="arrow ver">
+                        <div class="line top-to-bottom"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+
+            </div>
+            <div class="col-4">
+                <div class="example" style="padding-left: 98px;">
+                    <div class="arrow ver">
+                        <div class="line top-to-bottom"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- lemmatize and bag CONTENT-->
+
+        <div class="row" style="padding-top: 18px;">
+            <div class="col-4">
+                <h3 style="text-align: center;padding-bottom: 10px;"><span style="color: blue;">Lemmatizing </span>the list of words<p style="font-size: medium; text-align: center;">*in our case there are<br>120 lemmatized words.</p></h3>
+            </div>
+            <div class="col-4">
+
+            </div>
+            <div class="col-4">
+                <h3 style="text-align: center;padding-bottom: 10px;"><span style="color: blue;">Lemmatizing </span>the list of tags<p style="font-size: medium; text-align: center;">*in our case there are<br>23 lemmatized tags.</p></h3>
+            </div>
+        </div>
+
+        <!-- BoW -->
+        <div class="row">
+            <div class="col-4">
+                <div class="example" style="padding-right: 9px;">
+                    <div class="arrow ver">
+                        <div class="line top-to-bottom"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+
+            </div>
+            <div class="col-4">
+                <div class="example" style="padding-left: 98px;">
+                    <div class="arrow ver">
+                        <div class="line top-to-bottom" style="height: 400px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BoW content -->
+        <div class="row" style="padding-top: 18px;">
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-8">
+                        <h4 style="text-align: center;padding-bottom: 10px;">The lemmatized words are then processed to bag.<span style="color: blue;">Bag of Words </span>(or) BoW is used to calculate the repeated words<p style="font-size: medium; text-align: center;">*in our case there are<br>57 bag of words.</p></h4>
+                    </div>
+                    <div class="col-3" style="text-align: center;">
+                        <img style="width: 260px; height: 160px; border-radius: 5px;" src="{{ url_for('static', filename='images/57-trained-doc.png') }}">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+
+            </div>
+        </div>
+
+        <!-- dump pickle line -->
+        <div class="row">
+            <div class="col-4">
+                <div class="example" style="padding-right: 9px;">
+                    <div class="arrow ver">
+                        <div class="line top-to-bottom"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+
+            </div>
+            <div class="col-4">
+
+            </div>
+        </div>
+
+        <!-- dump pickle content -->
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-2">
+                <h4 style="text-align: center; padding-left: 20px;">texts.pkl</h4>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-5" style="border: 2px solid #000; text-align: center;">
+                <h5 style="text-align: center;padding: 15px; text-align: justify;">The baged words are then dumped into a pickle file.<span style="color: blue;"> Pickle</span>(or)'.pkl' is used in serializing and deserializing a Python object structure.</h5>
+            </div>
+            <div class="col-3">
+                <h4>lables.pkl</h4>
+            </div>
+        </div>
+
+        <!-- training lines -->
+        <div class="row">
+            <div class="col-4">
+                <div class="example" style="padding-right: 9px;">
+                    <div class="arrow ver">
+                        <div class="line top-to-bottom"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+
+            </div>
+            <div class="col-4">
+                <div class="example" style="padding-left: 98px;">
+                    <div class="arrow ver">
+                        <div class="line top-to-bottom" ></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- training curves -->
+        <div class="row">
+            <div class="col-4">
+                <div class="example">
+                    <div class="arrow cor">
+                        <div class="corner corner-bottom-left"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <img style="padding-top: 70px;" src="{{ url_for('static', filename='images/keras-train.png') }}">
+            </div>
+            <div class="col-4">
+                <div class="example">
+                    <div class="arrow cor">
+                        <div class="corner corner-bottom-right"></div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- keras center down arrow -->
+        <div class="keras-content" style="padding-top: 10px;">
+            The lemmatized words in 'texts.pkl' and 'lables.pkl' are now given as input for the <span style="color: blue;">keras</span> model. In this keras model the words are interconnected through 3-layers of neuron network. <span style="color: green;">128 neuron</span> , <span style="color: green;">64 neuron</span> & number of <span style="color: green;">neuron equal to number of BoW</span>.
+        </div>
+
+        <div class="example" style="padding-right: 9px;">
+            <div class="arrow ver">
+                <div class="line top-to-bottom"></div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-7">
+                <div style="padding-left: 50px; text-align: justify;">
+                    After the compilation of lemmatized words, the compiled model is stored as '<span style="color: blue;">.h5</span>' file or <span style="color: blue;">Hierarchical Data Formats</span>. It is used to store large amount of data in the form of multidimensional arrays. The format is used to store scientific data that is well-organized for quick retrieval and analysis.
+                </div>
+            </div>    
+            <div class="col-3">
+                <img style="width: 83px; height: 95px;" src="{{ url_for('static', filename='images/h5.png') }}">
+            </div>
+        </div>
+
+
+        <section class="data.json">
+            <section class="cta">
+                <!---  <h1 class="grad">All offers can be availed online and offline</h1>  --->
+                <a href="/user-working" class="hero-btn">Chatbot User input processing</a><br>
+                <span style="color: aliceblue;">*click on the above button to know how chatbot processes the user input.</span>
+            </section>
+    
+        </section>
+
+        <section class="footer2">
+            <div class="icons1">
+                <a href="mailto:aravinths741@gmail.com" target="_blank"><i class="fa fa-envelope fa-lg"></i></a>
+                <a href="https://github.com/Aravinth-S-731" target="_blank"><i class="fa fa-github fa-lg"></i></a>
+                <a href="tel:+917871867225" target="_blank"><i class="fa fa-phone fa-lg"></i></a>
+                <a href="https://www.linkedin.com/in/aravinths741" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
+            </div>
+        </section>
+
+
+
+
+
+    </div>
+
+</body>
+</html>

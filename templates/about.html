@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/main.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>E-Bot</title>
+    <link rel="website icon" type="png" href="{{ url_for('static', filename='images/web_icon.png') }}">
+</head>
+<body>
+
+    <section class="about">
+        <nav class="navbar navbar-dark bg-dark">
+            <a href="/home"><img src="{{url_for('static', filename='Images/logo_chatbot.png')}}"></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="/home">HOME</a></li>
+                    <li><a href="/about">ABOUT</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">WORKING</button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="/user-working">USER RESPONSE</a></li>
+                                <li><a class="dropdown-item" href="/bot-training">TRAINING</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="/index">CHATBOT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <div class="about-content">
+
+        <h2 style="font-size: 50px;">ABOUT</h2>
+        <!-- 
+            tech used : nltk , nltk.stem , pickle , numpy , keras.models, keras.layers , keras.optimizer , json , random 
+         -->
+        <div class="row">
+            <div class="col-8">
+                <div class="about-head-text">
+                    E-Bot is a web  based chatbot application. This chatbot helps the user to navigate through the government website. It also allows them to ask their queries and clarify their doubts. This chatbot is built upon <a class="about-head-text-link" style="text-decoration: none;" href="/about#about-python-flask">python-flask</a> server using <a class="about-head-text-link" style="text-decoration: none" href="/about#about-html">Hypertext Markup Language</a> (HTML), <a class="about-head-text-link" style="text-decoration: none;" href="/about#about-css">Cascading Style Sheets</a> (CSS) and <a class="about-head-text-link" style="text-decoration: none;" href="/about#about-js">Java Script</a> (JS) as the structure. The packages
+                    The packages used in this web application are Natural Language Toolkit (NLTK), Pickle, Numerical Python (NumPy), Keras, JavaScript Object Notation (Json) and Random. These packages are further explained below.
+                    <br>
+                    <a href="/index" class="about-launch-btn">Lauch E-Bot</a>
+                </div>
+            </div>
+            <div class="col-4">
+                <img class="about-head-img" src="{{url_for('static', filename='/images/about_head.jpg')}}">
+            </div>
+        </div>
+
+        <h2 style="margin-top: 45px;">Technologies Used</h2>
+
+        <section id="about-python-flask">
+            
+        </section>
+
+        <!-- Card deck -->
+        <div class="card-deck">
+            <div class="card mb-3">
+                <div class="view overlay">
+                    <img class="card-img-top" src="{{url_for('static', filename='/images/flask.png')}}" alt="Card image cap">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Python Flask</h4>
+                    <p class="card-text">Flask is used for developing web applications using python, implemented on Werkzeug and Jinja2.</p>
+                    <a href="https://flask.palletsprojects.com/en/2.2.x/" target="_blank"><button type="button" class="know-more-btn">Know more</button></a>
+                </div>        
+            </div>
+        
+
+            <div class="card mb-3">
+                <div class="view overlay">
+                    <img class="card-img-top" src="{{url_for('static', filename='/images/html.png')}}" alt="Card image cap">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">HTML</h4>
+                    <p class="card-text"> HTML is the standard markup language for documents designed to be displayed in a web browser.</p>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><button type="button" class="know-more-btn">Know more</button></a>
+                </div>        
+            </div>
+
+
+            <div class="card mb-3">
+                <div class="view overlay">
+                    <img class="card-img-top" src="{{url_for('static', filename='/images/css.png')}}" alt="Card image cap">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">CSS</h4>
+                    <p class="card-text">CSS is a style sheet language used for the presentation of a document written in a markup language such as HTML</p>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><button type="button" class="know-more-btn">Know more</button></a>
+                </div>        
+            </div>
+
+
+            <div class="card mb-3">
+                <div class="view overlay">
+                    <img class="card-img-top" src="{{url_for('static', filename='/images/js.png')}}" alt="Card image cap">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">JavaScript</h4>
+                    <p class="card-text">JavaScript helps the users to build modern web applications to interact directly without reloading the page every time. </p>
+                    <a href="https://www.javascript.com/" target="_blank"><button type="button" class="know-more-btn">Know more</button></a>
+                </div>        
+            </div>
+
+
+        </div>
+
+            <!-- Packages used -->
+
+            <h2 class="package-head" >Packages Used</h2>
+
+            <div class="row">
+
+                <!-- NLTK -->
+                <div class="col-9">
+                    <div class="packages-used">
+                        <h3 class="package-heading" style="text-align: right;">Natural Language Toolkit</h3>
+                        <p class="pakage-text">
+                            The Natural Language Toolkit, or more commonly NLTK, is a suite of libraries and programs for symbolic and statistical natural language processing for English written in the Python programming language. Natural Language Toolkit is the go-to API for NLP (Natural Language Processing) with Python. It is a really powerful tool to preprocess text data for further analysis like with ML models for instance. It helps convert text into numbers, which the model can then easily work with. 
+                        <a href="https://www.nltk.org/" target="_blank">Read More...</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <img class="package-img" src="{{url_for('static', filename='/images/nltk.jpg')}}">
+                </div>
+                <div style="padding-bottom: 250px;"></div>
+
+                <!-- pickle -->
+                <div class="col-3">
+                    <img class="package-img" src="{{url_for('static', filename='/images/pickle.jfif')}}">
+                </div>
+                <div class="col-9">
+                    <div class="packages-used">
+                        <h3 class="package-heading">Pickle</h3> 
+                        <p class="package-text">
+                            Pickle in Python is primarily used in serializing and deserializing a Python object structure. In other words, it's the process of converting a Python object into a byte stream to store it in a file/database, maintain program state across sessions, or transport data over the network. The advantage of using pickle is that it can serialize pretty much any Python object, without having to add any extra code. Its also smart in that in will only write out any single object once, making it effective to store recursive structures like graphs.
+                        <a href="https://docs.python.org/3/library/pickle.html" target="_blank">Read More...</a>
+                        </p>
+                    </div>
+                </div>
+                <div style="padding-bottom: 250px;"></div>
+
+                <!-- Numpy -->
+                <div class="col-9">
+                    <div class="packages-used">
+                        <h3 class="package-heading" style="text-align: right;">NumPy</h3>
+                        <p class="package-text">
+                            NumPy is a library for the Python programming language, adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.  It also has functions for working in domain of linear algebra, fourier transform, and matrices. NumPy was created in 2005 by Travis Oliphant. It is an open source project and you can use it freely. NumPy stands for Numerical Python. 
+                        <a href="https://numpy.org/" target="_blank">Read More...</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <img class="package-img" src="{{url_for('static', filename='/images/numpy.png')}}">
+                </div>
+                <div style="padding-bottom: 250px;"></div>
+
+                <!-- keras -->
+                <div class="col-3">
+                    <img class="package-img" src="{{url_for('static', filename='/images/keras.jfif')}}">
+                </div>
+                <div class="col-9">
+                    <div class="packages-used">
+                        <h3 class="package-heading">Keras</h3>
+                        <p class="package-text">
+                            Keras is an API designed for human beings, not machines. Keras follows best practices for reducing cognitive load: it offers consistent & simple APIs, it minimizes the number of user actions required for common use cases, and it provides clear & actionable error messages. It also has extensive documentation and developer guides.Keras is the most used deep learning framework among top-5 winning teams on Kaggle. Because Keras makes it easier to run new experiments. 
+                            <a href="https://keras.io/" target="_blank">Read More...</a>
+                        </p>
+                    </div>
+                </div>
+                <div style="padding-bottom: 250px;"></div>
+
+                <!-- json -->
+                <div class="col-9">
+                    <div class="packages-used">
+                        <h3 class="package-heading" style="text-align: right;">JSON</h3>
+                        <p class="package-text">
+                            JSON is a syntax for storing and exchanging data. JSON is text, written with JavaScript object notation.JSON JavaScript Object Notation is a format for structuring data. It is mainly used for storing and transferring data between the browser and the server. Python too supports JSON with a built-in package called json. This package provides all the necessary tools for working with JSON Objects including parsing, serializing, deserializing, and many more. 
+                        <a href="https://docs.python.org/3/library/json.html"  target="_blank">Read More...</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <img class="package-img" src="{{url_for('static', filename='/images/json.jfif')}}">
+                </div>
+
+            </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <section class="footer1">
+        <div class="icons">
+            <a href="mailto:aravinths741@gmail.com"><i class="fa fa-envelope fa-lg"></i></a>
+            <a href="https://github.com/Aravinth-S-731" target="_blank"><i class="fa fa-github fa-lg"></i></a>
+            <a href="tel:+917871867225"><i class="fa fa-phone fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/aravinths741" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
+        </div>
+    </section>
+
+
+</body>
+</html>

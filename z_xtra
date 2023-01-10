@@ -1,0 +1,64 @@
+// officals details, ration shop, emails / phone numbers, 
+
+
+HTML <a> target Attribute
+
+Example
+The target attribute specifies where to open the linked document:
+
+<a href="https://www.w3schools.com" target="_blank">Visit W3Schools</a>
+
+
+{"tag": "",
+     "patterns": [""],
+     "responses": [""],
+     "context": [""]
+    },
+
+    {"tag": "",
+     "patterns": [""],
+     "responses": [""],
+     "context": [""]
+    },
+
+    {"tag": "",
+     "patterns": [""],
+     "responses": [""],
+     "context": [""]
+    },
+
+    {"tag": "",
+     "patterns": [""],
+     "responses": [""],
+     "context": [""]
+    },
+
+    {"tag": "",
+     "patterns": [""],
+     "responses": [""],
+     "context": [""]
+    },
+
+    {"tag": "",
+     "patterns": [""],
+     "responses": [""],
+     "context": [""]
+    },
+
+    {"tag": "",
+     "patterns": [""],
+     "responses": [""],
+     "context": [""]
+    },
+
+    {"tag": "",
+     "patterns": [""],
+     "responses": [""],
+     "context": [""]
+    },
+
+    {"tag": "",
+     "patterns": [""],
+     "responses": [""],
+     "context": [""]
+    },

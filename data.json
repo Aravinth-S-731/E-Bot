@@ -1,0 +1,217 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi there", "How are you", "Is anyone there?","Hey", "Hello", "Good day"],
+     "responses": ["Hello, Hope you are having a great day!", "Good to see you again!", "Hi there, how can I help?"],
+     "context": [""]
+    },
+
+    {"tag": "goodbye",
+     "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+     "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+     "context": [""]
+    },
+
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+     "responses": ["Happy to help!", "Any time!", "My pleasure"],
+     "context": [""]
+    },
+
+    {"tag": "no answer",
+     "patterns": ["","!@#$%^&*()"],
+     "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+     "context": [""]
+    },
+
+    {"tag": "help",
+     "patterns": ["What you can do?", "What help you provide?", "What support is offered"],
+     "responses": ["I can guide you through our E-Service websites and answer your questions", "I can help you to navigate through the E-Services provided by the Tuticorin municipal corporation.","I help you to navigate through the E-Services provided by the Tuticorin municipal corporation. <br> Please state your queries."]
+    },
+
+    {"tag": "help",
+    "patterns": ["help"],
+    "responses": ["Please specify your need."],
+    "context": [""]
+  },
+
+    {"tag": "bill",
+     "patterns": ["bill payment"],
+     "responses": ["Please choose the domain to pay the bill <br><br>                                                                   <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='https://www.tnebnet.org/awp/login'  target='_blank'>Electricity bill</a></button>                                                                                        <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='https://bnc.chennaimetrowater.in/#/public/cus-login'  target='_blank'>Water bill</a></button> <br>                                                                                                                        <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold' href='https://tnurbanepay.tn.gov.in/WS_PaymentDetails.aspx#'  target='_blank'>Land tax</a></button>                                                                                                                     <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold' 'href='https://tnurbanepay.tn.gov.in/'  target='_blank'> Property tax </a> </button> <br>                                                                                                                              <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='https://onlineservices.tin.egov-nsdl.com/etaxnew/tdsnontds.jsp'  target='_blank'>Income tax</a></button>                                                                                    <button type='button' style='background:#579ffb;border:none;border-radius:5px;padding: 10px'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='https://tnsta.gov.in/transport/publiclogin.do'>RTO</a></button>"],
+     "context": [""]
+    },
+
+    {"tag": "Citizen portal user",
+     "patterns": ["citizen portal user","portal","login","log in"],
+     "responses": ["To login into citizen user portal : <a href='https://tnurbanepay.tn.gov.in/'  target='_blank'>Login</a> <br> If you are visiting first time : <a href='https://tnurbanepay.tn.gov.in/NewUserRegistration.aspx'  target='_blank'>Signin</a>"],
+     "context": [""]
+    },
+
+    {"tag": "TNEB",
+     "patterns": ["pay electricity","online electricity","electric","elctricy","electrcity"],
+     "responses": ["Here are the results as per your request. You can pay your electricity bill by the given link using proper login credentials :  <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='https://www.tnebnet.org/awp/login'  target='_blank'>Electricity bill</a></button>"],
+     "context": [""]
+    },
+
+    {"tag": "TNEB bill calculation",
+    "patterns": ["calculate electricity","calculate units"],
+    "responses": ["To calculate your electricity bill amount please use the following page <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold' 'href='https://www.tnebnet.org/awp/tariffMaster?execution=e1s1'  target='_blank'> calculate Electricity bill</a> </button>"],
+    "context": [""]
+   },
+
+   {"tag": "water bill",
+    "patterns": ["water","wter"],
+    "responses": ["To pay your water bill please use this portal <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='https://bnc.chennaimetrowater.in/#/public/cus-login'  target='_blank'>Water bill</a></button>"],
+    "context": [""]
+   },
+
+   {"tag": "land bill",
+    "patterns": ["land","lnd"],
+    "responses": ["To pay your land tax please utilize this portal <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='https://tnurbanepay.tn.gov.in/WS_PaymentDetails.aspx#'  target='_blank'>Land tax</a></button>"],
+    "context": [""]
+   },
+
+   {"tag": "property/house",
+    "patterns": ["house","property"],
+    "responses": ["To pay your property/house tax login <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='https://tnurbanepay.tn.gov.in/'  target='_blank'> Login </a> </button> "],
+    "context": [""]
+   },
+
+   {"tag": "income tax",
+    "patterns": ["income"],
+    "responses": ["To pay income tax please proceed to the following portal <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='https://onlineservices.tin.egov-nsdl.com/etaxnew/tdsnontds.jsp'  target='_blank'>Income tax</a></button>"],
+    "context": [""]
+   },
+
+   {"tag": "licence",
+   "patterns": ["licence","where do i aplly my drivers licence?","licence renewal","rto"],
+   "responses": ["To Know more about your licence info please login <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='https://tnsta.gov.in/vehicleservices.jsp'  target='_blank'>Login</a> </button>"],
+   "context": [""]
+  },
+
+  {"tag": "certificates",
+     "patterns": ["certificate","certficate","certifcate","cerficate"],
+     "responses": ["Please choose the certificate you want <br><br>                                                                   <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='https://www.indiafilings.com/learn/community-certificate-tamil-nadu/'  target='_blank'  target='_blank'>Community certificate</a></button>                                                                                        <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='https://www.indiafilings.com/learn/nativity-certificate-tamil-nadu/'  target='_blank'>Nativity certificate</a></button> <br>                                                                                                                        <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='https://www.indiafilings.com/learn/domicile-certificate-tamil-nadu/'  target='_blank'>Residence certificate</a></button>                                                                                                                     <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='https://www.indiafilings.com/learn/legal-heir-certificate-tamil-nadu/'  target='_blank'>Legal-heir certificate</a> </button> <br>                                                                                                                              <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='https://www.indiafilings.com/learn/income-certificate/'  target='_blank'>Income certificate</a></button>                                                                                    <button type='button' style='background:#579ffb;border:none;border-radius:5px;padding: 10px'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='http://gccapp.chennaicorporation.gov.in/birth_death_tn/PubBirthCertReport.jsp'  target='_blank'>Birth certificate</a></button> <br>                                                                                   <button type='button' style='background:#579ffb;border:none;border-radius:5px;padding: 10px'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='http://gccapp.chennaicorporation.gov.in/birth_death_tn/PubDeathCertReport.jsp'  target='_blank'>Death certificate</a></button> <br><br> <div class'war' style='color:#848484; font-size:small;'> *If the need certificate is not mentioned above, please specify your certificate </div>"],
+     "context": [""]
+    },
+
+    {"tag": "community certificate",
+     "patterns": ["community"],
+     "responses": ["To collect your community certificate proceed to following portal <br> <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='https://www.indiafilings.com/learn/community-certificate-tamil-nadu/'  target='_blank'>Community certificate</a></button> "],
+     "context": [""]
+    },
+
+    {"tag": "nativity certificate",
+     "patterns": ["nativie","nativity"],
+     "responses": ["To collect your nativity certificate proceed to following portal <br> <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='https://www.indiafilings.com/learn/nativity-certificate-tamil-nadu/'  target='_blank'>Nativity certificate</a></button> <br>   "],
+     "context": [""]
+    },
+
+    {"tag": "residence certificate",
+     "patterns": ["residence","residance"],
+     "responses": ["To collect your residance certificate proceed to following portal <br> <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='https://www.indiafilings.com/learn/domicile-certificate-tamil-nadu/'  target='_blank'>Residence certificate</a></button>   "],
+     "context": [""]
+    },
+
+    {"tag": "lega - heir",
+     "patterns": ["legal","heir","legal-heir","hier","legal-hier"],
+     "responses": ["To collect your legal-heir certificate proceed to following portal <br> <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='https://www.indiafilings.com/learn/legal-heir-certificate-tamil-nadu/'  target='_blank'>Legal-heir certificate</a> </button> "],
+     "context": [""]
+    },
+
+    {"tag": "birth certificate",
+     "patterns": ["birth","born"],
+     "responses": ["To collect your birth certificate proceed to following portal <br> <button type='button' style='background:#579ffb;border:none;border-radius:5px;padding: 10px'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='http://gccapp.chennaicorporation.gov.in/birth_death_tn/PubBirthCertReport.jsp'  target='_blank'>Birth certificate</a></button>"],
+     "context": [""]
+    },
+
+    {"tag": "death certificate",
+     "patterns": ["death","dead","died"],
+     "responses": ["To collect your death certificate proceed to following portal <br> <button type='button' style='background:#579ffb;border:none;border-radius:5px;padding: 10px'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='http://gccapp.chennaicorporation.gov.in/birth_death_tn/PubDeathCertReport.jsp'  target='_blank'>Death certificate</a></button>"],
+     "context": [""]
+    },
+
+    {"tag": "maps - rationshop - Tuticorin",
+   "patterns": ["ration","ration shop"," utility shop location","shop"],
+   "responses": ["Ration Shop, T.Saveriarpuram, Thalamuthu Nagar, Thoothukudi, Tamil Nadu 628002 <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.4838240037902!2d78.13965661438493!3d8.834464976335243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03e57abaeb2037%3A0xef64fbd643a58156!2sRation%20Shop!5e0!3m2!1sen!2sin!4v1673115093605!5m2!1sen!2sin' width='300' height='250' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"],
+   "context": [""]
+  },
+
+  {"tag": "maps - collectorate - Tuticorin",
+   "patterns": ["collectorate","collectors","collector location"],
+   "responses": ["THOOTHUKUDI District Collector Office, National Highway 7A, PSP Nagar, Korampallam, Thoothukudi, Tamil Nadu 628101 <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.0180335705177!2d78.09902249999996!3d8.784372900000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03f02df83b6537%3A0xe915e5b1c70bd990!2sTHOOTHUKUDI%20District%20Collector%20Office!5e0!3m2!1sen!2sin!4v1670769295214!5m2!1sen!2sin' width='300' height='250' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>"],
+   "context": [""]
+  },
+
+  {"tag": "maps - sub - collectorate - Tuticorin",
+   "patterns": ["sub collectorate","sub","sub collector location"],
+   "responses": ["Sub-Collector's Office,  Beach Rd, Matha Koil, Thoothukudi, Tamil Nadu 628001. <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.8212344452345!2d78.15395291438293!3d8.802859376417228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03ef75369192d9%3A0xbc208d379b124bf6!2sSub-Collector&#39;s%20Office!5e0!3m2!1sen!2sin!4v1673115580692!5m2!1sen!2sin' width='300' height='250' style='border:0;' allowfullscreen=' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"],
+   "context": [""]
+  },
+
+  {"tag": "maps - municipal - Tuticorin",
+   "patterns": ["Municipal Corporation ","Municipal","Corporation","corporation building "],
+   "responses": ["Municipal Corporation Office, 128, Palayamkottai Rd, Meenakshipuram, Thoothukudi, Tamil Nadu 628002. <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15771.27890504991!2d78.12299500781245!3d8.803000899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03ef9608072c69%3A0x3cec1d59b6e6f2a8!2sMunicipal%20Corporation%20Office%20(Thoothukudi)!5e0!3m2!1sen!2sin!4v1673115739890!5m2!1sen!2sin' width='300' height='250' style='border:0;' allowfullscreen=' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"],
+   "context": [""]
+  },
+
+  {"tag": "Joint Director of Agriculture Office",
+     "patterns": ["Joint Director of Agriculture","agriculture"],
+     "responses": ["Joint Director of Agriculture Office, PSP Nagar, Korampallam, Thoothukudi, Tamil Nadu 628101. <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.0130312329948!2d78.09277181438166!3d8.784843276463981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03f031846109d7%3A0x4c4e6a8fc9a13048!2sJoint%20Director%20of%20Agriculture%20Office!5e0!3m2!1sen!2sin!4v1673115901189!5m2!1sen!2sin' width='300' height='250' style='border:0;' allowfullscreen=' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"],
+     "context": [""]
+    },
+
+    {"tag": "Office of the District Registrar",
+     "patterns": ["District Registrar","registar","registration"],
+     "responses": ["Office of the District Registrar, 3rd St, Masilamani Puram, Thoothukudi, Tamil Nadu 628008. <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.9139103907305!2d78.13177821408344!3d8.794158593683996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03efb88365c87d%3A0x3e0930cf6e012c05!2sOffice%20of%20the%20District%20Registrar!5e0!3m2!1sen!2sin!4v1673116007530!5m2!1sen!2sin' width='300' height='250' style='border:0;' allowfullscreen=' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"],
+     "context": [""]
+    },
+
+    {"tag": "Taluk Office (Thoothukudi)",
+     "patterns": ["taluk"],
+     "responses": ["Taluk Office (Thoothukudi), Rathna Colony, Toovipuram, Thoothukudi, Tamil Nadu 628002. <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.8120989187996!2d78.13313651408345!3d8.803716593677324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03efc0ba12f125%3A0xbe8c622b33c843d2!2sTaluk%20Office%20(Thoothukudi)!5e0!3m2!1sen!2sin!4v1673116105436!5m2!1sen!2sin' width='300' height='250' style='border:0;' allowfullscreen=' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"],
+     "context": [""]
+    },
+
+    {"tag": "SP Office",
+     "patterns": ["SP","police station"],
+     "responses": ["Tuticorin District Superintendent of Police Office, PSP Nagar, Korampallam, Thoothukudi, Tamil Nadu 628101. <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.0001970611943!2d78.0933728143818!3d8.786049976460799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03f031bbfaea9f%3A0xd00eb7b1792716f4!2sSP%20Office!5e0!3m2!1sen!2sin!4v1673116247268!5m2!1sen!2sin' width='300' height='250' style='border:0;' allowfullscreen=' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"],
+     "context": [""]
+    },
+
+    {"tag": "urban health center",
+     "patterns": ["urban","health"],
+     "responses": ["Urban health center, Kamaraj Nagar, Thoothukudi, Tamil Nadu 628008. <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31544.001611392832!2d78.07805182439589!3d8.786049566277356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03efce307fc5fb%3A0x66316669c39557c!2sHospital%20Govt!5e0!3m2!1sen!2sin!4v1673116507980!5m2!1sen!2sin' width='300' height='250' style='border:0;' allowfullscreen=' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"],
+     "context": [""]
+    },
+
+    {"tag": "gh",
+     "patterns": ["government hospital","hospital","gh"],
+     "responses": ["Government Medical College Hospital, Subbiah Puram, Thoothukudi, Tamil Nadu 628002. <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31542.920984860473!2d78.10266991562497!3d8.798740000000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03efbc474ee01b%3A0xfc70c54e431de40f!2sGovernment%20Medical%20College%20Hospital!5e0!3m2!1sen!2sin!4v1673116624532!5m2!1sen!2sin' width='300' height='250' style='border:0;' allowfullscreen=' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"],
+     "context": [""]
+    },
+
+    {"tag": "collector",
+     "patterns": ["senthil raj","district collector","district colector","district collctor","district colletor"],
+     "responses": ["Dr. K . Senthil Raj I.A.S.,<br>District Collector,<br>     <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='mailto:collrtut@nic.in'  target='_blank'  target='_blank'>Mail</a></button>  <br>  <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='tel:0461-2340600'  target='_blank'  target='_blank'>Phone</a></button>"],
+     "context": [""]
+    },
+
+    {"tag": "sp",
+     "patterns": ["Superintendent of Police","Superintendent","Police"],
+     "responses": ["Dr. L.Balaji Saravanan<br>Superintendent of Police,<br>     <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='mailto:sptut.tnpol@nic.in'  target='_blank'  target='_blank'>Mail</a></button>  <br>  <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='tel:0461-2340200'  target='_blank'  target='_blank'>Phone</a></button>"],
+     "context": [""]
+    },
+
+    {"tag": "revenue",
+     "patterns": ["Revenue","Revenue"],
+     "responses": ["Dr. S. Kannabiran,<br>District Revenue Officer,<br>     <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='mailto:dro.tntut@nic.in'  target='_blank'  target='_blank'>Mail</a></button>  <br>  <button type='button' style='background:#579ffb; border:none; border-radius:5px; padding: 10px; margin-bottom:3px;'> <a style='text-decoration: none;color:white; font-size='medium; font-weight='bold'' href='tel:0461-2340400'  target='_blank'  target='_blank'>Phone</a></button>"],
+     "context": [""]
+    },
+
+  {"tag": "maps - E-service",
+   "patterns": ["E-service location","E-Center location"],
+   "responses": ["E-SEVA CENTER (Common Service Center) THOOTHUKUDI,3/87D, Railway flyover, opp. to Food Corporation of India, near 3rd mile, Indra Nagar, Thoothukudi, Tamil Nadu 628008 <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126167.36573433568!2d78.0681437582031!3d8.811399699999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03ef9215f69091%3A0x327378a2766b8c6a!2sTamilnadu%20Electricity%20Board!5e0!3m2!1sen!2sin!4v1670769228669!5m2!1sen!2sin' width='300' height='250' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>"],
+   "context": [""]
+  }
+]
+}

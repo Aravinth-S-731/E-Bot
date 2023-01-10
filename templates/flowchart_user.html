@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/flowchart.css') }}">
+    <title>How it works-user response</title>
+    <link rel="website icon" type="png" href="{{ url_for('static', filename='images/web_icon.png') }}">
+</head>
+<body>
+    
+    <!-- HEADER AND NAV - BAR -->
+
+    <section class="about">
+        <nav class="navbar navbar-dark bg-dark">
+            <a href="/home"><img src="{{url_for('static', filename='Images/logo_chatbot.png')}}"></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="/home">HOME</a></li>
+                    <li><a href="/about">ABOUT</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">WORKING</button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="/user-working">USER RESPONSE</a></li>
+                                <li><a class="dropdown-item" href="/bot-training">TRAINING</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="/index">CHATBOT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <div class="work-content">
+        <h2 style="font-size: 50px;">WORKING<p style="font-size: x-large;">User input</p></h2>
+        <h4>Let's look at how the questions posed by users are treated.</h4>
+
+        <div class="row">
+
+                <div class="col-2">
+                    <div class="usr-inp-div">
+                        <!-- <h3 class="usr-inp">Question</h3> -->
+                        <img class="usr-img" src="{{ url_for('static', filename='images/man.png') }}">
+                        <p class="usr-query">User query</p>
+                    </div>
+                </div>
+    
+                <div class="typewriter col-8">
+                    <p style="font-size: 42px;" class="line-1 anim-typewriter">How can i pay my electric bill ?</p>
+                </div>
+            
+        </div>
+    </div>
+
+    <!-- Bag of Words  (BoW) -->
+    <section>
+        <h2 style="font-weight: 800; padding-top: 80px; text-align: center;">Steps involved</h2>
+        <!-- STEP - 1 -->
+        <div style="padding-top: 25px;">
+            <h2 style="font-weight: 600; margin-left: 6%;">Step-1</h2>
+
+            <div class="content row">
+
+                <div class="token-content">
+                    <h3 style="font-weight: 600; text-align: center;">Tokenizing the sentence</h3>
+                    In Natural Language Processing, tokenization divides a string into a list of tokens. Tokens come in handy when finding valuable patterns and helping to replace sensitive data components with non-sensitive ones. <span style="color: blue;">word_tokenize</span> is a function in Python that splits a given sentence into words using the NLTK library. Then each of the words are converted into lowercase.
+                    <div class="token-eg">
+                        <h4 style="font-weight: 550; text-align: center; letter-spacing: 3px;"><br>How can i pay my electric bill ?</h4>
+                        <span style='font-size:60px; margin-left: 50%;'>&#8595;</span>
+                        <h4 style="text-align: center;">['how','can','i','pay','my','electric','bill','?']</h4>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <!-- STEP - 2 -->
+        <div style="padding-top: 25px;">
+            <h2 style="font-weight: 600; text-align: right; margin-right: 6%;">Step-2</h2>
+
+            <div class="content row">
+
+                <div class="token-content">
+                    <h3 style="font-weight: 600; text-align: center;">BoW (Bag of Words)</h3>
+                    Using BoW, we can calculate the repeated words in the sentence if present and prioritize the word using boolean values <span style="color: blue;">1</span> (if repeated) or <span style="color: blue;">0</span> (not repeated). Then this bag of words are cleaned up using NLTK packages by comparing it with the predefined set of word such as 'a','the','is'. It also removes special characters.
+                    <div class="token-eg">
+                        <h4 style="font-weight: 550; text-align: center; letter-spacing: 3px;"><br>['how','can','i','pay','my','electric','bill','?']</h4>
+                        <span style='font-size:60px; margin-left: 50%;'>&#8595;</span>
+                        <h4 style="text-align: center;">['<del style="color: red;">how</del>','<del style="color: red;">can</del>','<del style="color: red;">i</del>','pay','<del style="color: red;">my</del>','electric','bill','<del style="color: red;">?</del>']</h4>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <!-- STEP - 3 -->
+        <div style="padding-top: 25px;">
+            <h2 style="font-weight: 600; margin-left: 6%;">Step-3</h2>
+
+            <div class="content row">
+
+                <div class="token-content">
+                    <h3 style="font-weight: 600; text-align: center;">Lemmatizing the words</h3>
+                    <span style="color: blue;">Lemmatization</span> is the process of grouping together the different inflected forms of a word so they can be analyzed as a single item. Lemmatization is similar to stemming but it brings context to the words. So it links words with similar meanings to one word. Example, the word '<span style="color: brown;">better</span>' ⇛ '<span style="color: green;">good</span>'. <br><br><br>
+                    <div class="token-eg">
+                        <h4 style="font-weight: 550; text-align: center; letter-spacing: 3px;">pay <span style='font-size:40px;'>&#8594;</span> <span>pay</span> </h4>
+
+                        <h4 style="font-weight: 550; text-align: center; letter-spacing: 3px;">electric<span style='font-size:40px;'>&#8594;</span> <span style="color: rgb(0, 105, 0);">electricity</span> </h4>
+
+                        <h4 style="font-weight: 550; text-align: center; letter-spacing: 3px;">bill <span style='font-size:40px;'>&#8594;</span> <span>bill</span> </h4>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <!-- STEP - 4 -->
+        <div style="padding-top: 25px;">
+            <h2 style="font-weight: 600; text-align: right; margin-right: 6%;">Step-4</h2>
+
+            <div class="content row">
+
+                <div class="token-content">
+                    <h3 style="font-weight: 600; text-align: center;">Matching the lemmatized words</h3>
+                    After lemmatizing the words, the words are compared with the pre-defined set of  answers. If the lemmatized keyword matches with the tag of the answer, the data is fetched from the <span style="color: blue;">.json</span> file.
+                    
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="json-example-img">
+                                <img style="width: 700px; height: 100px; border-radius: 5px; box-shadow: black;" src="{{ url_for('static', filename='images/json_example.png') }}">
+                            </div>
+                            <h4 style="font-weight: 550; text-align: center; letter-spacing: 3px;"><br> <span style="color: rgb(97, 97, 97);">Keyword : </span>electricity</h4>
+                        </div>
+                        <div class="col-2" style="padding-top: 100px; text-align: center;">
+                            <span style='font-size:60px;'>&rarr;</span>
+                        </div>
+                        <div class="col-5" style="padding-top: 15px;">
+                            <div class="json-box">
+                                <p>Lorem ipsum <br> dolor sit amet consectetur adipisicing elit. Iste aperiam numquam cum officiis maiores. Aliquid consectetur ut perspiciatis, blanditiis dolore iure quibusdam, ipsum qui dolorum quam deserunt, voluptatem laborum incidunt!<br>Lorem ipsum <br> dolor sit amet consectetur adipisicing elit. Iste aperiam numquam cum officiis maiores. Aliquid consectetur ut perspiciatis, blanditiis dolore iure quibusdam, ipsum qui dolorum quam deserunt, voluptatem laborum incidunt!<br>Lorem ipsum <br> dolor sit amet consectetur adipisicing elit. Iste aperiam numquam cum officiis maiores. Aliquid consectetur ut perspiciatis, blanditiis dolore iure quibusdam, ipsum qui dolorum quam deserunt, voluptatem laborum incidunt!<br>Lorem ipsum <br> dolor sit amet consectetur adipisicing elit. Iste aperiam numquam cum officiis maiores. Aliquid consectetur ut perspiciatis, blanditiis dolore iure quibusdam, ipsum qui dolorum quam deserunt, voluptatem laborum incidunt!</p>
+                                <div class="json-inner-box">
+                                    <span style="font-size: 10px; color: green;">tag : electricity</span><br><br><br><span style="font-size: 5px; color: rgb(35, 35, 244);"><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos incidunt modi nihil soluta in explicabo quaerat repellendus ullam mollitia, debitis, quod eaque ipsum nobis, tempora omnis molestiae dolorum corrupti laboriosam!</span>
+                                </div>
+                                <p>Lorem ipsum <br> dolor sit amet consectetur adipisicing elit. Iste aperiam numquam cum officiis maiores. Aliquid consectetur ut perspiciatis, blanditiis dolore iure quibusdam, ipsum qui dolorum quam deserunt, voluptatem laborum incidunt!<br>Lorem ipsum <br> dolor sit amet consectetur adipisicing elit. Iste aperiam numquam cum officiis maiores. Aliquid consectetur ut perspiciatis, blanditiis dolore iure quibusdam, ipsum qui dolorum quam deserunt, voluptatem laborum incidunt!<br></p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="data.json" style="padding-top: 40px;">
+        <section class="cta">
+            <!---  <h1 class="grad">All offers can be availed online and offline</h1>  --->
+            <a href="/bot-training" class="hero-btn">Chatbot training</a><br>
+            <span style="color: aliceblue;">*click on the above button to know how chatbot is trained and genarates response.</span>
+        </section>
+
+    </section>
+
+    <section class="footer2">
+        <div class="icons1">
+            <a href="mailto:aravinths741@gmail.com" target="_blank"><i class="fa fa-envelope fa-lg"></i></a>
+            <a href="https://github.com/Aravinth-S-731" target="_blank"><i class="fa fa-github fa-lg"></i></a>
+            <a href="tel:+917871867225" target="_blank"><i class="fa fa-phone fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/aravinths741" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
+        </div>
+    </section>
+
+
+
+
+
+</body>
+</html>
